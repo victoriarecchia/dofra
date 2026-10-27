@@ -95,7 +95,7 @@ export default function App() {
   const t=content[lang]
   useEffect(()=>{document.documentElement.lang=lang;window.localStorage.setItem('dofra-lang',lang);document.title=lang==='es'?'Dofra Software | Desarrollo web y software a medida':'Dofra Software | Web development & custom software'},[lang])
   const navIds=['inicio','servicios','proyectos','nosotros','contacto']
-  const contactLink=`mailto:${'CONTACT_EMAIL_REPLACE_ME'}?subject=${encodeURIComponent(t.contactSubject)}`
+  const contactLink=`mailto:${'dofrasoftware@gmail.com'}?subject=${encodeURIComponent(t.contactSubject)}`
   return <>
     <header className="header"><div className="container nav-inner"><Brand/><nav className={menuOpen?'nav-links open':'nav-links'} aria-label={lang==='es'?'Navegación principal':'Main navigation'}>{t.nav.map((label,i)=><a key={navIds[i]} href={`#${navIds[i]}`} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav><div className="nav-actions"><button className="lang-switch" onClick={()=>setLang(lang==='es'?'en':'es')} aria-label={lang==='es'?'Switch to English':'Cambiar a español'}><Icon name="globe" size={16}/>{lang.toUpperCase()}</button><a className="button button-primary nav-cta" href="#contacto">{t.talk}<Icon name="arrow" size={17}/></a><button className="menu-toggle" onClick={()=>setMenuOpen(!menuOpen)} aria-label={menuOpen?'Cerrar menú':'Abrir menú'} aria-expanded={menuOpen}><Icon name={menuOpen?'close':'menu'} size={24}/></button></div></div></header>
     <main>
