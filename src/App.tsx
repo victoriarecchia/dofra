@@ -1,4 +1,4 @@
-    import type { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 
 type Lang = 'es' | 'en'
@@ -128,7 +128,8 @@ export default function App() {
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(min(100%, 310px), 1fr))',gap:22,marginTop:24}}>
           {[
             {name:'Dentalia',category:lang==='es'?'LANDING PAGE · ODONTOLOGÍA':'LANDING PAGE · DENTAL CARE',description:lang==='es'?'Concepto de landing para un consultorio odontológico: tratamientos, presentación del equipo, preguntas frecuentes y contacto directo por WhatsApp.':'Landing page concept for a dental practice: treatments, team introduction, FAQs, and direct WhatsApp contact.',subtitle:lang==='es'?'Clínica odontológica':'Dental practice',gradient:'linear-gradient(135deg,#d8f4f2,#b8dbe8)',accent:'#127c83',mark:'✳'},
-            {name:'Estudio Norte',category:lang==='es'?'LANDING PAGE · CONTABILIDAD':'LANDING PAGE · ACCOUNTING',description:lang==='es'?'Concepto de sitio profesional para un estudio contable: servicios impositivos, asesoramiento para empresas y monotributistas, y formulario de consultas.':'Professional website concept for an accounting firm: tax services, business and independent professional advisory, and an inquiry form.',subtitle:lang==='es'?'Asesoramiento contable':'Accounting advisory',gradient:'linear-gradient(135deg,#e6ecf6,#c5d3e9)',accent:'#244b7b',mark:'↗'}
+            {name:'Estudio Norte',category:lang==='es'?'LANDING PAGE · CONTABILIDAD':'LANDING PAGE · ACCOUNTING',description:lang==='es'?'Concepto de sitio profesional para un estudio contable: servicios impositivos, asesoramiento para empresas y monotributistas, y formulario de consultas.':'Professional website concept for an accounting firm: tax services, business and independent professional advisory, and an inquiry form.',subtitle:lang==='es'?'Asesoramiento contable':'Accounting advisory',gradient:'linear-gradient(135deg,#e6ecf6,#c5d3e9)',accent:'#244b7b',mark:'↗'},
+            {name:'Atelier Arquitectura',category:lang==='es'?'LANDING PAGE · ARQUITECTURA':'LANDING PAGE · ARCHITECTURE',description:lang==='es'?'Concepto de landing para un estudio de arquitectura: portfolio visual de obras, presentación de servicios, proceso de trabajo y formulario para solicitar una consulta.':'Landing page concept for an architecture studio: visual project portfolio, services, design process, and an inquiry form.',subtitle:lang==='es'?'Estudio de arquitectura':'Architecture studio',gradient:'linear-gradient(135deg,#f2e9dc,#dfcdb8)',accent:'#80634c',mark:'⌂'}
           ].map(project=><article key={project.name} style={{background:'#fff',border:'1px solid #e0e8f2',borderRadius:18,overflow:'hidden',display:'flex',flexDirection:'column'}}>
             <div style={{background:project.gradient,padding:24,minHeight:205,display:'flex',alignItems:'center',justifyContent:'center'}} aria-label={`${project.name} — ${project.subtitle}`}>
               <div style={{width:'100%',maxWidth:350,background:'#fff',borderRadius:10,boxShadow:'0 18px 45px #12304d24',overflow:'hidden'}}>
