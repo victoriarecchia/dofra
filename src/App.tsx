@@ -546,11 +546,13 @@ export default function App() {
     t.contactSubject
   )}`
 
-  const quoteLink = `mailto:${contactEmail}?subject=${encodeURIComponent(
-    lang === 'es'
-      ? 'Solicitud de presupuesto - Dofra Software'
-      : 'Quote request - Dofra Software'
-  )}`
+ const quoteLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  contactEmail
+)}&su=${encodeURIComponent(
+  lang === 'es'
+    ? 'Solicitud de presupuesto - Dofra Software'
+    : 'Quote request - Dofra Software'
+)}`
 
   useEffect(() => {
     document.documentElement.lang = lang
